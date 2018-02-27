@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        $(document).ready(function(){
+            $("#click").click(function(){
+                alert("You clicked the button!");
+            })
+
+            $("#hide").click(function(){
+                $("#showhide").hide();
+            })
+
+            $("#show").click(function(){
+                $("#showhide").show();
+            })
+
+            $("#toggle").click(function(){
+                $("#toggleText").toggle();
+            });
+
+             $("#slideDown").click(function(){
+                $("#slideText").slideDown("slow");
+            });
+
+            $("#slideUp").click(function(){
+                $("#slideText").slideUp("slow");
+            });
+
+            $("#slideToggle").click(function(){
+                $("#slideToggleText").slideToggle();
+            });
+
+             $("#fadeIn").click(function(){
+                $("#fadeText").fadeIn();
+            });
+
+            $("#fadeOut").click(function(){
+                $("#fadeText").fadeOut();
+            });
+
+            $("#addClass").click(function(){
+                $("#addClassText").addClass("redText");
+            });
+
+             $("#removeClass").click(function(){
+                $("#addClassText").removeClass("redText");
+            });
+
+            $("#before").click(function(){
+                $("#beforeafter").before("<h5>This text appears before the middle!</h5><br>");
+            });
+
+            $("#after").click(function(){
+                $("#beforeafter").after("<br><h5>This text appears after the middle!</h5>");
+            });
+
+            $("#append").click(function(){
+                $("#appendText").append("<p>You appended this sentence!!</p>");
+            });
+
+            $("#html").click(function(){
+                $("#htmlText").html("<p>You thought this was sample text, but it was me, Dio!</p>");
+            });
+
+            $("#attr").click(function(){
+                alert($("img").attr("alt"));
+            });
+
+            $("#val").click(function(){
+                $("input:text").val("Ghostbusters!");
+            });
+        })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="functions">
+            <h1>Click</h1>
+            <button id="click" class="buttons">Click Me</button>
+            <p>The click event is fired when a pointing device button (usually a mouse's primary button) is pressed and released on a single element.</p>
+        </div>
+        <div class="functions">
+            <h1>Hide/Show</h1>
+            <button id="hide" class="buttons">Hide</button>
+            <button id="show" class="buttons">Show</button>
+            <p id="showhide">Click the buttons to show and hide this text!</p>
+        </div>
+        <div class="functions">
+            <h1>Toggle</h1>
+            <button id="toggle" class="buttons">Toggle</button>
+            <p id="toggleText">Click the button to toggle the text!</p>
+        </div>
+        <div class="functions">
+            <h1>Slide Down/Up</h1>
+            <button id="slideDown" class="buttons">Slide Down</button>
+            <button id="slideUp" class="buttons">Slide Up</button>
+            <p id="slideText">Press slideUp to hide, press slideDown to show!</p>
+        </div>
+        <div class="functions">
+            <h1>Slide Toggle</h1>
+            <button id="slideToggle" class="buttons">Slide Toggle</button>
+            <p id="slideToggleText">Click the button to slide toggle the text!</p>
+        </div>
+        <div class="functions">
+            <h1>Fade In/Out</h1>
+            <button id="fadeIn" class="buttons">Fade In</button>
+            <button id="fadeOut" class="buttons">Fade Out</button>
+            <p id="fadeText">Use the buttons to fade the text in and out!</p>
+        </div>
+        <div class="functions">
+            <h1>Add/Remove Class</h1>
+            <button id="addClass" class="buttons">Add Class</button>
+            <button id="removeClass" class="buttons">Remove Class</button>
+            <p id="addClassText">Click the button to add class and change the text color to Red!</p>
+        </div>
+        <div class="functions">
+            <h1>Before and After</h1>
+            <button id="before" class="buttons">Before</button>
+            <button id="after" class="buttons">After</button>
+            <p id="beforeafter">Click the button to add text above and below!</p>
+        </div>
+        <div class="functions">
+            <h1>Append</h1>
+            <button id="append" class="buttons">Append</button>
+            <p id="appendText">Click the button to append another sentence!</p>
+        </div>
+        <div class="functions">
+            <h1>HTML</h1>
+            <button id="html" class="buttons">html</button>
+            <p id="htmlText">Click this button to change this text!</p>
+        </div>
+        <div class="functions">
+            <h1>Attr</h1>
+            <button id="attr" class="buttons">Attr</button>
+            <img src="cat.jpg" alt= "I'm Looking At YOU!">
+        </div>
+        <div class="functions">
+            <h1>Val</h1>
+            <button id="val" class="buttons">Val</button>
+            <p id="valText">Click this button to set what's in the input field below!</p>
+            <br>
+            <p>Who you gonna call? <input type="text" name="User"></p>
+        </div>
+    </div>
+        
+    </div>
+</body>
+</html>
